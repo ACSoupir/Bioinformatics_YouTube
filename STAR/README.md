@@ -19,7 +19,7 @@ To decompress and untar:
 ## Running STAR
 
 Command used the first time to run STAR with the `SRR_Acc_List.txt`:
->`car SRR_Acc_List.txt | parallel -j 2 "gunzip trimmedReads{}_*P.gz && STAR --runThreadN 32 --genomeDir starIndex --readFilesIn trimmedReads/{}_1P trimmedReads/{}_2P --outFilterIntronMotifs RemoveNoncacnonical --outFileNamePrefix starAligned/{} --outSAMtype BAM SortedByCoordinate && pigz trimmedReads/{}_*P"
+>`car SRR_Acc_List.txt | parallel -j 2 "gunzip trimmedReads{}_*P.gz && STAR --runThreadN 32 --genomeDir starIndex --readFilesIn trimmedReads/{}_1P trimmedReads/{}_2P --outFilterIntronMotifs RemoveNoncacnonical --outFileNamePrefix starAligned/{} --outSAMtype BAM SortedByCoordinate && pigz trimmedReads/{}_*P"`
 
 Command used in the second video which keeps the genome in RAM, parallel unzipping of the trimmed files, limits the RAM used for sorting the BAM file, and then keeping the unmapped reads so we can use them later:
 >`cat SRR_Acc_List.txt | parallel -j 1 "parallel gunzip ::: trimmedReads/{}_*P.gz && STAR --runThreadN 64 --genomeLoad LoadAndKeep --genomeDir starIndex/ --readFilesIn trimmedReads/{}_1P trimmedReads/{}_2P --outFilterIntronMotifs RemoveNoncanonical --outFileNamePrefix starAligned/{} --limitBAMsortRAM 5000000000 --outSAMtype BAM SortedByCoordinate --outReadsUnmapped Fastx && pigz trimmedReads/{}_*P"`
