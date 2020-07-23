@@ -6,6 +6,7 @@ These are the top 1,000,000 lines from each of the files. This should be the fir
 
 This was created using:
 >`cat 'SRR_Acc_List - Copy.txt' | parallel -j 1 "gzip -cd rawReads/{}_1.fastq.gz | head -1000000 > shortReads/{}_1.fastq"` #forward reads
+
 >`cat 'SRR_Acc_List - Copy.txt' | parallel -j 1 "gzip -cd rawReads/{}_2.fastq.gz | head -1000000 > shortReads/{}_2.fastq"` #reverse reads
 
 >`pigz *.fastq` #zipping up each file
