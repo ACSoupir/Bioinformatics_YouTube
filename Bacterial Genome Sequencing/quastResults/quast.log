@@ -1,0 +1,477 @@
+/root/miniconda3/bin/quast -o quastResults -g prokkaResults/PROKKA_11082020.gff -t 64 -1 trimmedReads/SRR9321164_1P.fastq -2 trimmedReads/SRR9321164_2P.fastq --single trimmedReads/SRR9321164_unpaired.fastq --gene-thresholds 0,1000 assembly/assembly.fasta --glimmer
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-4.4.0-19041-Microsoft-x86_64-with-debian-buster-sid (linux_64)
+  Python version: 3.7.7
+  CPUs number: 64
+
+Started: 2020-11-08 13:21:49
+
+Logging to /mnt/d/bacterial_genome/quastResults/quast.log
+NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+
+CWD: /mnt/d/bacterial_genome
+Main parameters: 
+  MODE: default, threads: 64, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  assembly/assembly.fasta ==> assembly
+
+2020-11-08 13:21:50
+Running Reads analyzer...
+
+NOTICE: Improper read names in /mnt/d/bacterial_genome/trimmedReads/SRR9321164_1P.fastq (forward reads)! Names should end with /1 (for forward reads) or /2 (for reverse reads) but @SRR9321164.6 was found!
+QUAST will attempt to fix read names.
+
+NOTICE: Improper read names in /mnt/d/bacterial_genome/trimmedReads/SRR9321164_2P.fastq (reverse reads)! Names should end with /1 (for forward reads) or /2 (for reverse reads) but @SRR9321164.6 was found!
+QUAST will attempt to fix read names.
+  Logging to files /mnt/d/bacterial_genome/quastResults/reads_stats/reads_stats.log and /mnt/d/bacterial_genome/quastResults/reads_stats/reads_stats.err...
+  Using existing flag statistics file /mnt/d/bacterial_genome/quastResults/reads_stats/assembly.stat
+  Creating total report...
+    saved to /mnt/d/bacterial_genome/quastResults/reads_stats/reads_report.txt, reads_report.tsv, and reads_report.tex
+Done.
+
+2020-11-08 13:21:56
+Running Basic statistics processor...
+  Contig files: 
+    assembly
+  Calculating N50 and L50...
+    assembly, N50 = 155275, L50 = 12, Total length = 5518621, GC % = 68.39, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /mnt/d/bacterial_genome/quastResults/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /mnt/d/bacterial_genome/quastResults/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /mnt/d/bacterial_genome/quastResults/basic_stats/GC_content_plot.pdf
+  Drawing assembly GC content plot...
+    saved to /mnt/d/bacterial_genome/quastResults/basic_stats/assembly_GC_content_plot.pdf
+Done.
+
+2020-11-08 13:21:57
+Running GlimmerHMM...
+  assembly
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/0.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/0.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/1.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/1.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/2.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/2.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/3.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/3.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/4.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/4.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/5.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/5.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/6.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/6.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/7.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/7.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/8.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/8.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/9.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/9.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/10.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/10.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/11.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/11.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/12.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/12.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/13.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/13.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/14.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/14.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/15.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/15.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/16.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/16.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/17.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/17.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/18.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/18.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/19.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/19.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/20.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/20.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/21.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/21.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/22.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/22.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/23.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/23.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/24.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/24.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/25.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/25.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/26.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/26.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/27.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/27.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/28.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/28.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/29.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/29.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/30.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/30.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/31.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/31.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/32.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/32.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/33.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/33.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/34.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/34.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/35.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/35.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/36.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/36.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/37.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/37.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/38.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/38.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/39.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/39.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/40.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/40.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/41.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/41.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/42.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/42.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/43.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/43.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/44.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/44.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/45.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/45.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/46.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/46.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/47.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/47.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/48.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/48.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/49.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/49.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/50.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/50.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/51.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/51.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/52.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/52.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/53.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/53.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/54.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/54.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/55.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/55.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/56.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/56.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/57.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/57.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/58.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/58.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/59.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/59.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/60.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/60.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/61.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/61.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/62.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/62.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/63.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/63.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/64.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/64.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/65.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/65.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/66.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/66.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/67.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/67.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/68.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/68.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/69.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/69.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/70.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/70.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/71.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/71.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/72.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/72.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/73.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/73.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/74.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/74.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/75.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/75.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/76.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/76.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/77.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/77.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/78.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/78.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/79.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/79.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/80.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/80.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/81.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/81.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/82.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/82.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/83.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/83.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/84.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/84.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/85.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/85.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/86.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/86.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/87.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/87.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/88.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/88.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/89.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/89.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/90.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/90.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/91.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/91.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/92.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/92.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/93.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/93.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/94.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/94.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/95.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/95.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/96.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/96.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/97.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/97.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    /root/miniconda3/bin/glimmerhmm quastResults/predicted_genes/tmp/tmp4vqzo5cp/98.fasta \
+    -d /root/miniconda3/lib/python3.7/site-packages/quast_libs/glimmer/trained/arabidopsis \
+    -g -o quastResults/predicted_genes/tmp/tmp4vqzo5cp/98.gff >> quastResults/predicted_genes/assembly_glimmer.stderr \
+    2>> quastResults/predicted_genes/assembly_glimmer.stderr
+    Genes = 5124 unique, 5124 total
+    Predicted genes (GFF): /mnt/d/bacterial_genome/quastResults/predicted_genes/assembly_glimmer_genes.gff.gz
+Done.
+
+2020-11-08 13:22:44
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2020-11-08 13:22:45
+RESULTS:
+  Text versions of total report are saved to /mnt/d/bacterial_genome/quastResults/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /mnt/d/bacterial_genome/quastResults/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /mnt/d/bacterial_genome/quastResults/report.html
+  PDF version (tables and plots) is saved to /mnt/d/bacterial_genome/quastResults/report.pdf
+  Icarus (contig browser) is saved to /mnt/d/bacterial_genome/quastResults/icarus.html
+  Log is saved to /mnt/d/bacterial_genome/quastResults/quast.log
+
+Finished: 2020-11-08 13:22:46
+Elapsed time: 0:00:56.473311
+NOTICEs: 3; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

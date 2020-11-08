@@ -1,0 +1,7 @@
+organism: Methylorubrum species Q1 
+contigs: 118
+bases: 5525056
+CDS: 4996
+rRNA: 3
+tRNA: 49
+tmRNA: 1
